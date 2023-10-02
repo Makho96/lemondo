@@ -1,0 +1,105 @@
+@import '../../assets/style/utils.scss';
+
+.filters-container{
+  width: 100%;
+  font-size: 1rem;
+  .market-count{
+    width: 100%;
+    font-family: var(--font-TKT-medium);
+    .text {
+      color: var(--text-color-medium);
+    }
+    .count {
+      color: var(--font-TKT-medium);
+    }
+    @media (max-width: 970px) {
+      display: none;
+    }
+  }
+  .filters-header{
+    width: 100%;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0px 2px 5px #0000000F;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: white;
+    .text{
+      color: var(--text-color-medium);
+      font-family: var(--font-TKT-medium);
+      font-weight: bold;
+    }
+    .close-button{
+      width: 36px;
+      height: 36px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      background-color: var(--border-color-darkrer);
+      border-radius: 10px;
+    }
+  }
+  .filters{
+    margin-top: pxToEm(30);
+    width: 100%;
+    padding: pxToEm(35) pxToEm(35) pxToEm(35) pxToEm(30);
+    background-color: var(--color-white);
+    border-radius: pxToEm(15);
+    border: 1px solid var(--border-color);
+    .single-filter{
+      margin-top: pxToEm(40);
+      .filer-name{
+        width: 1005;
+        text-align: left;
+        font-size: 1em;
+        font-family: var(--font-TKT-medium);
+        padding-bottom: pxToEm(15, 16);
+      }
+      &:first-child{
+        margin-top: 0;
+      }
+    }
+  }
+  .filter-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: sticky;
+    bottom: 0;
+    box-shadow: 0px -3px 6px #00000014;
+    background-color: var(--color-white);
+    display: none;
+    .button{
+      width: 100%;
+      padding: 15px 0;
+      background: #003333;
+      border: none;
+      border-radius: 10px;
+      color: var(--color-white);
+      font-size: 1rem;
+      font-family: var(font-TKT-medium);
+      font-weight: bold;
+    }
+  }
+  @media (max-width: 970px) {
+    .filters-header{
+      display: flex;
+    }
+    .filters {
+      border-radius: 0;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 30px;
+      border: none;
+      margin-top: 0;  
+    }
+    .filter-footer{
+      display: flex;
+    }
+  }
+}

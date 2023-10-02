@@ -1,0 +1,134 @@
+@import '../../../../assets/style/utils.scss';
+
+.list-item-container{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: inherit;
+  padding: 1em pxToEm(20, 16);
+  transition: all 500ms;
+  border-radius: 10px;
+  .left{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: pxToEm(20, 16);
+    .button{
+      width: 36px;
+      height: 36px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      background-color:#F5F5F8;
+      border-radius: 10px;
+      border: 1px solid transparent;
+      transition: all 500ms;
+      img {
+        display: block;
+      }
+    }
+    .domain-name{
+      font-size: 1em;
+      font-family: var(--font-TKT-medium);
+      color: var(--text-color-darker);
+    }
+  }
+  .right{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: pxToEm(20, 16);
+    .prices{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      .price-gel{
+        font-size: 1em;
+        font-weight: bold;
+        font-family: var(--font-TKT-medium);
+      }
+      .price-usd{
+        font-size: pxToEm(12, 16);
+        color: var(--text-color-medium);
+      }
+    }
+    .status{
+      .added{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 120px;
+        height: 36px;
+        gap: 6px;
+        font-size: 14px;
+        color: var(--text-color-medium);
+        font-family: var(--font-TKT-medium);
+        border-radius: 10px;
+        background-color: #F5F5F8;
+        .check-mark{
+          width: 18px;
+          height: 18px;
+          border-radius: 50%;
+          background-color: var(--color-green);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            width: 80%;
+          }
+        }
+      }
+      .add-button{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        font-size: pxToEm(14);
+        padding: 0 pxToEm(8, 14);
+        font-family: var(--font-TKT-medium);
+        border: none;
+        border-radius: pxToEm(10, 14);
+        background-color: var(--color-green);
+        gap: 8px;
+        width: 36px;
+        height: 36px;
+        transition: all 500ms;
+        flex-shrink: 0;
+        cursor: pointer;
+        overflow: hidden;
+        span {
+          display: inline-block;
+          color: var(--color-white);
+          white-space: nowrap;
+        }
+        .icon-container{
+          height: 17px;
+          svg {
+            path{
+              fill: var(--color-white);
+            }
+          }
+        }
+      }
+    }
+  }
+  &:hover{
+    background-color: #F5F5F8;
+    .left{
+      .button{
+        background: var(--color-white);
+        border-color: var(--color-green);
+      }
+    }
+    .right {
+      .status {
+        .add-button {
+          width: 120px;
+          padding: 0 pxToEm(15, 14);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@import '../../../assets/style/utils.scss';
+
+.container{
+  width: 100%;
+  .filter-button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: pxToRem(14);
+    color: var(--color-white);
+    padding: pxToEm(10, 14) 0;
+    background: var(--color-green);
+    border: none;
+    border-radius: 10px;
+    font-family: var(--font-TKT-regular);
+    cursor: pointer;
+  }
+}

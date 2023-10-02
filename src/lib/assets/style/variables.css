@@ -1,0 +1,13 @@
+:root{
+  --text-color-light: #92929D;
+  --text-color-medium: #696974;
+  --text-color-dark: #171725;
+  --text-color-darker: #171D25;
+  --color-white: #fff;
+  --color-green: #99CC66;
+
+  --border-color: #F1F1F5;
+  --border-color-darkrer: #E5E5ED;
+
+  --container-max-width: 1286px;
+}

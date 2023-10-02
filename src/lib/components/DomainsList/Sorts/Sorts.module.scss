@@ -1,0 +1,43 @@
+@import '../../../assets/style/utils.scss';
+
+.container{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: pxToRem(14);
+  .sorts-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+    .title{
+      font-family: var(--font-TKT-medium);
+      color: var(--text-color-darker);
+      font-weight: bold;
+    }
+    ul {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 16px;
+      li {
+        .sort-item{
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          gap: 5px;
+          cursor: pointer;
+          .sort-image{
+            &.desc {
+              transform: rotate(180deg);
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 560px) {
+    display: none;
+  }
+}

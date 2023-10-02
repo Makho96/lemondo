@@ -1,0 +1,30 @@
+@import '../lib/assets/style/variables.css';
+@import '../lib/assets/style/utils.scss';
+
+body {
+  font-family: var(--font-TKT-regular);
+  background: #FAFAFB 0% 0% no-repeat padding-box;;
+}
+
+.wrapper{
+  max-width: var(--container-max-width);
+  width: 95%;
+  margin: 0 auto;
+  @media (max-width: 650px) {
+    width: 100%;
+  }
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*:focus{
+  outline: none;
+}
+
+ul {
+  list-style-type: none;
+}

@@ -1,0 +1,54 @@
+.checkbox-container{
+  width: 100%;
+  label {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    .text{
+      font-size: 1rem;
+      color: var(--text-color-darker);
+    }
+    input {
+      position: absolute;
+      opacity: 0;
+      visibility: hidden;
+      &:checked{
+        &+.check-container{
+          border-color: var(--color-green);
+          background-color: var(--color-green);
+          img {
+            opacity: 1;
+          }
+        }
+      }
+    }
+    .check-container{
+      width: 20px;
+      height: 20px;
+      border: 1px solid #E5E5ED;
+      border-radius: 6px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: transparent;
+      transition: all 500ms;
+      img {
+        opacity: 0;
+        width: 80%;
+        transition: all 500ms;
+      }
+    }
+    &:hover{
+      .check-container{
+        border-color: var(--color-green);
+        background-color: var(--color-green);
+        img {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

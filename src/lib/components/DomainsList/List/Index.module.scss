@@ -1,0 +1,53 @@
+@import '../../../assets/style/utils.scss';
+
+.list-container{
+  background-color: var(--color-white);
+  border: 1px solid var(--border-color);
+  font-size: 1rem;
+  border-radius: pxToEm(15, 16);
+  padding: pxToEm(30) pxToEm(20);
+  margin-top: pxToEm(30);
+  nav {
+    width: 100%;
+    ul{
+      width: 100%;
+      li {
+        width: 100%;
+        border-bottom: 1px solid var(--border-color);
+        &:last-child{
+          border: none;
+        }
+      }
+    }
+  }
+  @media (max-width: 560px) {
+    padding: 0;
+    border-radius: 0;
+    margin-top: 0;
+  }
+}
+
+.no-data{
+  width: 100%;
+  .image-container{
+    margin: 35px 0;
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  .text {
+    text-align: center;
+    h3 {
+      font-family: var(--font-TKT-medium);
+      font-size: pxToRem(18);
+      padding-bottom: pxToEm(15, 18);
+      color: var(--text-color-medium);
+    }
+    p {
+      font-size: pxToRem(14);
+      color: var(--text-color-light);
+      text-wrap: balance;
+    }
+  }
+}
